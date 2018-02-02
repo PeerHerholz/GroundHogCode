@@ -27,10 +27,12 @@ if [ ! -d "$data_path/surf/" ]; then
   echo "the folder $data_path/surf doesn't exist, check again and make sure that your path is correct"
 fi
 
-# start freeview and load respective outputs
-freeview -v $data_path/mri/brainmask.mgz \ # load brainmask
-         -v $data_path/mri/aseg.mgz:colormap=lut:opacity=0.2 \ # load aseg segmentation, overlay on brainmask
-         -f $data_path/surf/lh.white:edgecolor=yellow \ # load lh white surface, overlay in yellow 
-         -f $data_path/surf/rh.white:edgecolor=yellow \ # load rh white surface, overlay in yellow
-         -f $data_path/surf/lh.pial:annot=aparc:edgecolor=red \ # load lh pial surface, annotation=aparc, overlay in red
-         -f $data_path/surf/rh.pial:annot=aparc:edgecolor=red # load rh pial surface, annotation=aparc, overlay in red
+# start freeview and load respective following outputs:
+# load brainmask
+# load aseg segmentation, overlay on brainmask
+# load lh white surface, overlay in yellow 
+# load rh white surface, overlay in yellow
+# load lh pial surface, annotation=aparc, overlay in red
+# load rh pial surface, annotation=aparc, overlay in red
+
+freeview -v $data_path/mri/brainmask.mgz -v $data_path/mri/aseg.mgz:colormap=lut:opacity=0.2 -f $data_path/surf/lh.white:edgecolor=yellow -f $data_path/surf/rh.white:edgecolor=yellow -f $data_path/surf/lh.pial:annot=aparc:edgecolor=red -f $data_path/surf/rh.pial:annot=aparc:edgecolor=red 
