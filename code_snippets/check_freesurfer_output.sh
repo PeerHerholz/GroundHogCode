@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # check_freesurfer_output.sh
 
 # This bash script loads data processed with freesurfer stored under data_path into freeview to do an initial check of some recon-all outputs 
