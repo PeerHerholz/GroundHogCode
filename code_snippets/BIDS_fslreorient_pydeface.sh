@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 ## BIDS_fslreorient_pydeface.sh
 
 # This bash script prepares anatomical data in BIDS format for subsequent processing by applying fslreorient2std, followed by pydeface. Hence, it assumes you data is in BIDS format. It's especially useful, if you rearranged data and don't have the chance to go back to the original dicoms and use e.g. heudiconv, etc. to convert your data. If you do have the original dicoms, you should convert them again using the mentioned tools (wrt e.g. metadata extraction) and adjust those scripts accordingly.
